@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: red;
+    overflow: hidden;
+}
+
+.gameContainer {
+    width: 100%;
+    height: 100vh;
+    background-size: 100vw 100vh;
+    background-image: url(7486.jpg);
+    background-repeat: no-repeat;
+}
+
+.thief {
+    background-image: url(thief.png);
+    background-repeat: none;
+    background-size: cover;
+    width: 232px;
+    height: 218px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.gameOver {
+    position: relative;
+    font-size: 80px;
+    font-weight: bolder;
+    visibility: hidden;
+    text-align: center;
+    color: white;
+    top: 50%;
+}
+
+#scoreCount {
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.police {
+    background-image: url(police.png);
+    background-repeat: none;
+    background-size: cover;
+    width: 300px;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    left: 60vw;
+}
+
+.animatethief {
+    animation: animatethief 0.6s linear;
+}
+
+@keyframes animatethief {
+    from {
+        bottom: 0;
+    }
+    50% {
+        bottom: 422px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+.policeAni {
+    animation: policeAni 5s linear infinite;
+}
+
+@keyframes policeAni {
+    from {
+        left: 100vw;
+    }
+    to {
+        left: -10vw;
+    }
+}
